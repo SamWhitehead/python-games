@@ -16,7 +16,7 @@ BLUE = (0,0,255)
 
 def main():
  
-    # Initialisere settings og klokke
+    # Initialise the clock
     clock = pygame.time.Clock()
     settings = {};
     settings['show_framerate'] = False
@@ -45,7 +45,7 @@ def main():
  
     # Initialise the screen
     screen = pygame.display.set_mode(settings['screen_size'], FULLSCREEN, 32)
-    pygame.display.set_caption("Ping v0.1")
+    pygame.display.set_caption("Pong v0.1")
     random.seed()
     pygame.mouse.set_visible(False)
  

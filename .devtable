@@ -1,0 +1,10 @@
+profile = DevTable.Profile(
+  Analyze = [python],
+  Build = [],
+  Debug = [],
+  Deploy = []
+)
+
+python = Python.Analyzer(
+  Files = Glob('*.py')
+)
