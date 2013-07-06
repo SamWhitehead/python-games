@@ -39,7 +39,7 @@ def main():
     settings['players'].add(settings['player1'], settings['player2'])
     settings['balls'].add(Ball([settings['width']/2, settings['height']/2], settings['screen_size']))
  
-    font = pygame.font.Font('arial', 30)
+    font = pygame.font.Font(None, 30)
     fpstext = font.render("FPS: "+ str(settings['currentframerate']), 1, WHITE)
     fpstextpos = fpstext.get_rect()
  
@@ -130,10 +130,10 @@ def main():
             screen.blit(pausetext, pausetext_rect)
  
         if settings['score_changed']:
-            p1text = font.render("Player 1: "+ str(settings['player1_score']) + " poeng", 1, WHITE)
+            p1text = font.render("Player 1: "+ str(settings['player1_score']) + " pong", 1, WHITE)
             p1text_rect = p1text.get_rect()
             p1text_rect = p1text_rect.move(5, settings['height'] - p1text_rect.height - 5)
-            p2text = font.render("Player 2: "+ str(settings['player2_score']) + " poeng", 1, WHITE)
+            p2text = font.render("Player 2: "+ str(settings['player2_score']) + " pong", 1, WHITE)
             p2text_rect = p2text.get_rect()
             p2text_rect = p2text_rect.move(settings['width'] - p2text_rect.width - 5, settings['height'] - p2text_rect.height - 5)
             settings['score_changed'] = False
